@@ -1,25 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import CreateArea from './components/CreateArea.jsx'
+import {
+    Text,
+    Container,
+    Heading,
+    Box
+} from "@chakra-ui/react"
+import * as styles from './styles.jsx';
+import { FaCrown } from "react-icons/fa6";
 
-function App() {
+
+const currentYear = new Date().getFullYear();
+
+
+export default function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box>
+
+    
+
+        <Heading as="h1" size="4xl" style={styles.boxH1}>
+          <FaCrown />Keeper heading
+        </Heading>
+
+        <Container style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <Container>
+        <CreateArea />
+        </Container>
+        </Container>
+    <Text style={styles.copyrightText}>©Copyright {currentYear}</Text>
+    
+
+    </Box>
   );
 }
 
-export default App;
