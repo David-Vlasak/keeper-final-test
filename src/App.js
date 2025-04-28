@@ -8,6 +8,7 @@ import {
 } from "@chakra-ui/react"
 import * as styles from './styles.jsx';
 import { FaCrown } from "react-icons/fa6";
+import { Flex } from "@chakra-ui/react"
 
 
 const currentYear = new Date().getFullYear();
@@ -21,7 +22,9 @@ export default function App() {
     
 
         <Heading as="h1" size="4xl" style={styles.boxH1}>
-          <FaCrown />Keeper heading
+          <Flex gap="10px">
+            <FaCrown /> Keeper App
+          </Flex>
         </Heading>
 
         <Container style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>

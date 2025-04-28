@@ -9,12 +9,14 @@ import { createArea, createFields, submitButton } from "../styles";
 import Note from "./Note";
 import { FaPlusSquare } from "react-icons/fa";
 import { useControllableState } from '@chakra-ui/react'
+import { useState } from "react";
 
 
 export default function CreateArea() {
     const formFields = {Title:"", Content:""};
     const [createChange, setCreateChange] = useControllableState({ defaultValue: formFields });
     const [createNote, setCreateNote] = useControllableState({ defaultValue: [] });
+    const [deleteNote, setDeleteNote] = useState([]);
 
     function handleChange(e) {
         const {value, name} = e.target;
@@ -34,6 +36,13 @@ export default function CreateArea() {
             setCreateNote((prev) => [createChange, ...prev]),
             setCreateChange(formFields)
         );
+    }
+
+    function handleDeleteNote() {
+        return (
+            setCreateNote((prev) => [!clickedNoteId, ...prev]), //How do I get the index of the clicked Note?
+            setCreateChange(formFields)
+        )
     }
 
     return(
@@ -66,6 +75,7 @@ export default function CreateArea() {
     Content={value.Content}
     key={index}
     id={index}
+    isClicked={handleDeleteNote}
     />
     )}
     </Box>

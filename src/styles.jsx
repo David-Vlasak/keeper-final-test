@@ -64,3 +64,9 @@ export const copyrightText = {
     width:"100%",
     textAlign:"center",
 }
+
+export const TrashCan = {
+    pointer:"hover",
+    marginTop:"5px",
+    float:"right"
+}
