@@ -1,3 +1,12 @@
+This is my own from-scratch creation of the very first real project I did when learning React.
+I used Chakra as the job I learn this for works with it.
+
+
+
+
+
+#Save this for later if needed
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
