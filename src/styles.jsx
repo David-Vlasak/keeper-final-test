@@ -66,7 +66,7 @@ export const copyrightText = {
 }
 
 export const TrashCan = {
-    pointer:"hover",
+    cursor:"pointer",
     marginTop:"5px",
     float:"right"
 }

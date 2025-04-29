@@ -2,7 +2,6 @@ import React from "react";
 import { Box, Heading, Text } from '@chakra-ui/react';
 import { noteBox, TrashCan } from '../styles.jsx';
 import { FaRegTrashAlt } from "react-icons/fa";
-import useState from "react";
 
 
 export default function Note(props) {
@@ -21,7 +20,7 @@ export default function Note(props) {
             <Text>{props.Content}</Text>
             <FaRegTrashAlt 
                 style={TrashCan}
-                onClick={props.isClicked}
+                onClick={props.whenClicked}
             />
             </Box>
         </Box>
